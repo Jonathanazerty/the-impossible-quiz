@@ -4,7 +4,7 @@ export default function Header() {
     return (
         <>
         <div>
-            <div className="header">The Impossible Quiz </div>
+            <div className="header"><h2>The Impossible Quiz</h2> </div>
         </div>
         </>
     )

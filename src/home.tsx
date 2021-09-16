@@ -12,11 +12,11 @@ const Home = () => {
     return (
         <div className="home">
         <Header />
-        <div className="home-body">
-            <li> 
-                <Link className="linkHome" to="./question1"> START THE IMPOSSIBLE QUIZ !!!! 🙅🏿	🙅🏾	🙅🏽	🙅🏼	🙅🏻</Link>
-            </li>
-        </div>
+            <div className="home-body">
+                <> 
+                    <Link className="linkHome" to="./question1"><h3> START THE IMPOSSIBLE QUIZ !!!! 🙅🏿	🙅🏾	🙅🏽	🙅🏼	🙅🏻</h3></Link>
+                </>
+            </div>
         </div>
     )
 } 

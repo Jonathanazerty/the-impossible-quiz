@@ -6,13 +6,13 @@ import { Link } from 'react-router-dom';
 const Question1 = () => {
 
     (() => {
-        document.getElementById('question-form').addEventListener("submit", compareUserAnswer);
+        (document.getElementById('question-form') as HTMLInputElement).addEventListener("submit", compareUserAnswer);
     
         function compareUserAnswer (event: any) {
             event.preventDefault();
     
             const correctAnswer: string = rightAnswer();
-            const input: string = document.getElementById('input').value;
+            const input: string = (document.getElementById('input') as HTMLInputElement).value;
     
             if (correctAnswer === input) { 
                 alert("Awesome! Your answer: " + input + " was correct 👏🏿 👏🏻. You can be named many things, stupid not being one of them. On to the next question");
