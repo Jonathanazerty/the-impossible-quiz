@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {MouseEvent} from 'react';
 import './questions.css';
 import Header from './header';
 import { Link } from 'react-router-dom';
@@ -6,9 +6,9 @@ import { Link } from 'react-router-dom';
 const Question1 = () => {
 
     (() => {
-        (document.getElementById('question-form') as HTMLInputElement).addEventListener("submit", compareUserAnswer);
+        // (document.getElementById('question-form') as HTMLInputElement).addEventListener("submit", compareUserAnswer);
     
-        function compareUserAnswer (event: any) {
+        function compareUserAnswer (event: MouseEvent<HTMLButtonElement>) {
             event.preventDefault();
     
             const correctAnswer: string = rightAnswer();
@@ -32,17 +32,15 @@ const Question1 = () => {
     return (
         <div className="home">
         <Header />
-        <form action="" id="question-form">
-            <p>Question 1: What language do we use to style a page ?</p>
+        <form action="" id="question-form" onSubmit={compareUserAnswer}>
+            <p className="questions"><h3><u>Question 1: What language do we use to style a page ?</u></h3></p>
             <label>Your answer:</label>
             <input type="text" id="input"/>
-            <input type="submit" value="Submit"/>
+            <input type="submit" id="submit" value="Submit" /*onSubmit={compareUserAnswer}*/ />
         </form>
-            <li>
-                <Link className="question" to="./question2">Next question...</Link>
-            </li>
-        <>
-        </>
+            <>
+                <Link className="question" to="./question2">Go to question 2...</Link>
+            </>
         </div>
     )
 }

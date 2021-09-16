@@ -39,10 +39,8 @@ const Question9 = () => {
             <input type="submit" value="Submit"/>
         </form>
             <li>
-                <Link className="question" to="./question10">Next question...</Link>
+                <Link className="question" to="./question10">Go to question 10...</Link>
             </li>
-        <>
-        </>
         </div>
     )
 }

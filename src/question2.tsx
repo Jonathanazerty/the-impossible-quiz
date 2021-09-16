@@ -6,26 +6,26 @@ import { Link } from 'react-router-dom'
 const Question2 = () => {
 
     (() => {
-        (document.getElementById('answer-form') as HTMLInputElement).addEventListener("submit", compareUserAnswer);
+        // (document.getElementById('answer-form') as HTMLInputElement).addEventListener("submit", compareUserAnswer);
     
-        function compareUserAnswer (event: any) {
-            event.preventDefault();
+        // function compareUserAnswer (event: any) {
+        //     event.preventDefault();
     
-            const correctAnswer = rightAnswer();
-            const input = (document.getElementById('answer') as HTMLInputElement).value;
+        //     const correctAnswer = rightAnswer();
+        //     const input = (document.getElementById('answer') as HTMLInputElement).value;
     
-            if (correctAnswer === input) { 
-                alert("Awesome! Your answer: " + input + " was correct 👏🏿 👏🏻. You can be named many things, stupid not being one of them. On to the next question");
-            } else {
-                alert("Bummer... You guessed " + input + ". and that's wrong 🤦🏽 🤦🏼! Please try again !");
-            }
-        }
+        //     if (correctAnswer === input) { 
+        //         alert("Awesome! Your answer: " + input + " was correct 👏🏿 👏🏻. You can be named many things, stupid not being one of them. On to the next question");
+        //     } else {
+        //         alert("Bummer... You guessed " + input + ". and that's wrong 🤦🏽 🤦🏼! Please try again !");
+        //     }
+        // }
     
-        function rightAnswer() {
-            const correctAnswer = 'CSS';
+        // function rightAnswer() {
+        //     const correctAnswer = 'CSS';
     
-            return correctAnswer;
-        }
+        //     return correctAnswer;
+        // }
     })();
 
     
@@ -33,16 +33,14 @@ const Question2 = () => {
         <div className="home">
         <Header />
         <form action="" id="question-form">
-            <p>Question 2: ?</p>
+            <p><h3>Question 2: ?</h3></p>
             <label>Your answer:</label>
             <input type="text" id="input"/>
             <input type="submit" value="Submit"/>
         </form>
             <li>
-                <Link className="question" to="./question3">Next question...</Link>
+                <Link className="question" to="./question3">Go to question 3...</Link>
             </li>
-        <>
-        </>
         </div>
     )
 }

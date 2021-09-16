@@ -14,6 +14,15 @@ body{
     text-align: center;
 }
 
-.linkHome {
+.linkHome, .question {
     color: yellow;
+  }
+
+#input, #submit {
+      color:rgb(1, 1, 54);
+      background-image: lightblue;
+  }
+
+  .questions {
+      color:tomato;
   }
