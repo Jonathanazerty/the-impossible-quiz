@@ -1,46 +1,43 @@
 import React from 'react';
 import './questions.css';
 import Header from './header';
-import { Link } from 'react-router-dom'
 
 const Question2 = () => {
-
-    (() => {
-        // (document.getElementById('answer-form') as HTMLInputElement).addEventListener("submit", compareUserAnswer);
     
-        // function compareUserAnswer (event: any) {
-        //     event.preventDefault();
+        const compareUserAnswer = () => {
+            console.log('hello!');
     
-        //     const correctAnswer = rightAnswer();
-        //     const input = (document.getElementById('answer') as HTMLInputElement).value;
+            const correctAnswer: string = rightAnswer();
+            const input: string = (document.getElementById('input') as HTMLInputElement).value;
     
-        //     if (correctAnswer === input) { 
-        //         alert("Awesome! Your answer: " + input + " was correct 👏🏿 👏🏻. You can be named many things, stupid not being one of them. On to the next question");
-        //     } else {
-        //         alert("Bummer... You guessed " + input + ". and that's wrong 🤦🏽 🤦🏼! Please try again !");
-        //     }
-        // }
+            if (correctAnswer === input) { 
+                alert("Awesome! Your answer: " + input + " was correct 👏🏿 👏🏻. You can be named many things, stupid not being one of them. On to the next question");
+                if (window.confirm('Are you sure you are ready for question 2 ?'))
+                    {
+                        window.location.href = "./question3";
+                    }
+                    else
+                    {
+                        window.location.href = "./question2";
+                    }
+            } else {
+                alert("Bummer... You guessed " + input + ". and that's wrong 🤦🏽 🤦🏼! Please try again !");
+            }
+        }
     
-        // function rightAnswer() {
-        //     const correctAnswer = 'CSS';
+        function rightAnswer() {
+            const correctAnswer = 'tomorrow';
     
-        //     return correctAnswer;
-        // }
-    })();
-
+            return correctAnswer;
+        }
     
     return (
         <div className="home">
         <Header />
-        <form action="" id="question-form">
-            <p><h3>Question 2: ?</h3></p>
-            <label>Your answer:</label>
-            <input type="text" id="input"/>
-            <input type="submit" value="Submit"/>
-        </form>
-            <li>
-                <Link className="question" to="./question3">Go to question 3...</Link>
-            </li>
+            <p className="questions">Question 2: What is always coming, but never arrives?</p>
+            <label className="answer">Your answer:</label>
+            <input className="form-control input-lg" type="text" id="input" placeholder="Try to give the correct answer here..."/>
+            <button className="submit" type="submit" value="Submit" onClick={compareUserAnswer}>Submit</button>
         </div>
     )
 }

@@ -1,46 +1,42 @@
 import React from 'react';
 import './questions.css';
 import Header from './header';
-import { Link } from 'react-router-dom'
 
 const Question4 = () => {
-
-    (() => {
-        (document.getElementById('answer-form') as HTMLInputElement).addEventListener("submit", compareUserAnswer);
     
-        function compareUserAnswer (event: any) {
-            event.preventDefault();
+        const compareUserAnswer = () => {
     
-            const correctAnswer = rightAnswer();
-            const input = (document.getElementById('answer') as HTMLInputElement).value;
+            const correctAnswer: string = rightAnswer();
+            const input: string = (document.getElementById('input') as HTMLInputElement).value;
     
             if (correctAnswer === input) { 
                 alert("Awesome! Your answer: " + input + " was correct 👏🏿 👏🏻. You can be named many things, stupid not being one of them. On to the next question");
+                if (window.confirm('Are you sure you are ready for question 2 ?'))
+                    {
+                        window.location.href = "./question5";
+                    }
+                    else
+                    {
+                        window.location.href = "./question4";
+                    }
             } else {
                 alert("Bummer... You guessed " + input + ". and that's wrong 🤦🏽 🤦🏼! Please try again !");
             }
         }
     
         function rightAnswer() {
-            const correctAnswer = 'CSS';
+            const correctAnswer = 'a cold';
     
             return correctAnswer;
         }
-    })();
-
     
     return (
         <div className="home">
         <Header />
-        <form action="" id="question-form">
-            <p>Question 4: ?</p>
-            <label>Your answer:</label>
-            <input type="text" id="input"/>
-            <input type="submit" value="Submit"/>
-        </form>
-            <li>
-                <Link className="question" to="./question5">Go to question 5...</Link>
-            </li>
+            <p className="questions">Question 4: What can one catch that is not thrown?</p>
+            <label className="answer">Your answer:</label>
+            <input className="form-control input-lg" type="text" id="input" placeholder="Try to give the correct answer here..."/>
+            <button className="submit" type="submit" value="Submit" onClick={compareUserAnswer}>Submit</button>
         </div>
     )
 }

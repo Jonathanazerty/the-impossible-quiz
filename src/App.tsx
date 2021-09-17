@@ -10,12 +10,13 @@ import { Question7 } from '.';
 import { Question8 } from '.';
 import { Question9 } from '.';
 import { Question10 } from '.';
+import {Win} from '.';
 
 
 const App = () => {
   return (
     <Router>
-        <Link to="/"><button className="btn btn-outline-light col-12 p-2" type="button"> Homepage </button></Link>
+        <Link to="/"><button className="home-button" type="button"> Homepage </button></Link>
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/question1" component={Question1} />
@@ -28,6 +29,7 @@ const App = () => {
         <Route path="/question8" component={Question8} />
         <Route path="/question9" component={Question9} />
         <Route path="/question10" component={Question10} />
+        <Route path="/win" component={Win} />
       </Switch>
     </Router>
   )

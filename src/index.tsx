@@ -12,6 +12,7 @@ import { Question7 } from './question7';
 import { Question8 } from './question8';
 import { Question9 } from './question9';
 import { Question10 } from './question10';
+import {Win} from './win';
 
 export {
     Home,
@@ -24,7 +25,8 @@ export {
     Question7,
     Question8,
     Question9,
-    Question10
+    Question10,
+    Win
 };
 
 ReactDOM.render(

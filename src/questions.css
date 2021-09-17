@@ -1,28 +1,127 @@
 body{
+    font-family: 'Ubuntu', sans-serif;
     color: white;
     background:rgb(1, 1, 54);
-    /* color: white;
-    background: url(image/question-mark.jpg) no-repeat center center fixed; 
+    background: url(image/question.jpg) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover; */
-}
-
-.home, .homepage {
+    background-size: cover;
     justify-content: center;
     text-align: center;
 }
 
+.home-page {
+    padding: 120px;
+    padding-bottom: 228px;
+    background-image: url(./image/background.jpg);
+    width: 100%;
+    height: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header {
+    font-weight: bold;
+    color: rgb(20, 6, 78);
+    background-color: rgba(138, 140, 253, 0.4);
+    font-size: xx-large;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.questions {
+    
+    color: rgb(255, 251, 8);
+    background-color: rgba(20, 6, 78, 0.705);
+    font-size: xx-large;
+    margin-bottom: 270px;
+}
+
+.home-body{
+    margin: 70px;
+}
+
 .linkHome, .question {
-    color: yellow;
+    color: yellow;    
   }
 
-#input, #submit {
-      color:rgb(1, 1, 54);
-      background-image: lightblue;
+.home-button {
+    color: rgb(197, 197, 255);
+    background-color: rgb(20, 6, 78);
+    font-size: xx-large;
+    margin-top: 10px;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 5px 5px 5px rgb(176, 176, 243)
+}
+
+.home-button:hover {
+    transform: scale(1.2);
+    color: rgb(33, 17, 99);
+    border-radius: 10px;
+    padding: 10px;
+    background-color: rgb(197, 197, 255);
+    box-shadow: 10px 10px 10px rgb(33, 17, 99);
+    font-weight: bold;
+}
+
+.submit {
+    color: rgb(20, 6, 78);
+    background-color: rgba(197, 197, 255, 0.856);
+    font-weight: bold;
+    font-size: xx-large;
+    margin-top: 10px;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    box-shadow: 5px 5px 5px rgb(20, 6, 78);
+}
+
+.answer {
+    color: rgb(255, 251, 8);
+    background-color: rgba(20, 6, 78, 0.705);
+    padding: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: x-large;
+    margin-bottom: 10px;
+}
+
+#input {
+    text-align: center;
+    background-color: rgba(138, 140, 253, 0.8);
+    color: rgb(20, 6, 78);
+    border: none;
+    margin-bottom: 20px;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+::-webkit-input-placeholder { 
+    color: rgb(20, 6, 78);
   }
 
-  .questions {
-      color:tomato;
+.winner {
+      font-size: 50px;
+      color: yellow;
+      background-color: rgba(20, 6, 78, 0.705);
+      padding: 40px;
   }
+
+.image-win {
+    padding: 120px;
+    padding-bottom: 150px;
+    background-image: url(./image/champion.jpg);
+    width: 100%;
+    height: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

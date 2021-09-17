@@ -6,15 +6,12 @@ import { Link } from 'react-router-dom';
 
 const Home = () => {
 
-    
-
-    
     return (
-        <div className="home">
+        <div className="home-page">
         <Header />
             <div className="home-body">
                 <> 
-                    <Link className="linkHome" to="./question1"><h3> START THE IMPOSSIBLE QUIZ !!!! 🙅🏿	🙅🏾	🙅🏽	🙅🏼	🙅🏻</h3></Link>
+                    <Link className="linkHome" to="./question1"><h1> START THE IMPOSSIBLE QUIZ !!!! <br></br>🙅🏿	🙅🏾	🙅🏽	🙅🏼	🙅🏻</h1></Link>
                 </>
             </div>
         </div>
